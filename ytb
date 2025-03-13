@@ -4,7 +4,11 @@ import asyncio
 import csv
 from datetime import datetime, timedelta
 
-TOKEN = "MTMzODY3NDM1NDY0NDMyNDQxMg.GIN0F_.dmYhD7WXubt0xKufjLHrB5LXFFeLDFUw7_d9CU"  # Replace with your bot token
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("TOKEN")  # Replace with your bot token
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
 # Database placeholders
